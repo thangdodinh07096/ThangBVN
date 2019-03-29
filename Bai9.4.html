@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bai 9.4</title>
+	<link rel="stylesheet" href="../../Font File/font-awesome-4.7.0/css/font-awesome.css">
+	<style type="text/css" media="screen">
+	.imgs{
+		position: relative;
+		width: 1200px;
+	}
+	img{
+		position: absolute;
+		top: 50px;
+		width: 1200px;
+		height: 600px;
+		display: none;
+	}
+	.img span{
+		float: left;
+		padding-left: 10px;
+		padding-top: 5px;
+	}
+	.active img{
+		display: block !important;
+	}
+	.active span{			
+		color: orange !important;
+
+	}
+	.fa-arrow-left{
+		position: absolute;
+		color: orange;
+		background-color: #827e7e33;		
+		font-size: 50px;
+		top: 300px;
+		left: 30px;
+		padding: 10px;
+		border-radius: 10px;
+		z-index: 1000;
+	}
+	.fa-arrow-right{
+		position: absolute;
+		color: orange;
+		background-color: #827e7e33;
+		font-size: 50px;
+		top: 300px;
+		left: 1125px;
+		padding: 10px;
+		border-radius: 10px;
+		z-index: 1000;
+	}
+</style>
+<script type="text/javascript">
+	function load(){
+		setTimeout(function(){
+			
+		}, 3000);
+		var imgs = document.getElementsByTagName("span");
+		for (var i = 0; i < imgs.length; i++) {
+			imgs[i].addEventListener("click",function(){
+				var active = document.getElementsByClassName("active")[0];
+				active.className="img";
+				this.parentNode.className="active img";
+			});
+		}
+		var next = document.getElementsByClassName("fa-arrow-right")[0];		
+		next.addEventListener("click",function(){
+			var imgNext = document.getElementsByTagName("img");
+			for (var i = 0; i < imgNext.length; i++) {
+				imgNext
+			}
+		});		
+	}
+</script>
+</head>
+<body onload ="load()">
+	<div id="imgs">	
+		<i class="fa fa-arrow-left" style=""></i>
+		<i class="fa fa-arrow-right" style="color: orange"></i>	
+		<div class="active img">
+			<span class="fa fa-circle"></span>
+			<img src="anh.jpg">
+		</div>
+		<div class="img">
+			<span class="fa fa-circle"></span>
+			<div>
+				<img src="anh1.png">
+			</div>
+		</div>
+		<div class="img">
+			<span class="fa fa-circle"></span>
+			<div>
+				<img src="captain.jpg">
+			</div>
+		</div>
+		<div class="img">
+			<span class="fa fa-circle"></span>
+			<div>
+				<img src="logo.png">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

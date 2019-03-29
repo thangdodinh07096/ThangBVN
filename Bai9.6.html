@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css" media="screen">
+	.required{
+		color: red;
+	}
+</style>
+<script type="text/javascript">
+	function  load() {
+		var formDangKy = document.getElementsByTagName("form")[0];
+		formDangKy.addEventListener("submit",function(){
+			if(hoVaTen.value.trim()==""){
+				alert("Chưa nhập họ và tên");
+			}else{
+				if(formDangKy.gioiTinh.value==""){
+					alert("Chưa chọn giới tính");
+				}else{
+					if(formDangKy.namSinh.value==""){
+						alert("Chưa chọn ngày sinh");
+					}else{
+						if(formDangKy.matKhau.value==""){
+							alert("Chưa nhập mật khẩu");
+						}else{
+							if(formDangKy.confirm.value!=formDangKy.matKhau.value){
+								alert("Xác nhận mật khẩu không trùng khớp");
+							}else alert("Đăng ký thành công");	
+						}	
+					}	
+				}	
+			}					
+		});
+	}
+</script>
+</head>
+<body onload="load()">
+	<div style="    
+	width: 400px;
+	border: 1px solid;
+	border-radius: 15px;">
+	<form name="formDangKy">
+		<table style="padding: 35px">
+			
+			<tr>
+				<td>Họ và tên<span class="required">*</span>:</td>
+				<td>
+					<input id="hoVaTen" type="text" name="hoVaTen" value="" placeholder="Gõ họ tên vào đây"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Giới tính<span class="required">*</span>:</td>
+				<td>
+					<input type="radio" name="gioiTinh" value="Nam" placeholder=""/>Nam
+					<input type="radio" name="gioiTinh" value="Nữ" placeholder=""/>Nữ
+				</td>
+			</tr>
+			<tr>
+				<td>Ngày tháng năm sinh<span class="required">*</span>:</td>
+				<td>
+					<input type="date" name="namSinh" value="" placeholder="">
+				</td>
+			</tr>
+			<tr>
+				<td>Mật khẩu<span class="required">*</span>:</td>
+				<td>
+					<input type="password" name="matKhau" value="" placeholder=""/>
+				</td>
+			</tr>
+			<tr>
+				<td>Xác nhận mật khẩu<span class="required">*</span>:</td>
+				<td>
+					<input type="password" name="confirm" value="" placeholder=""/>
+				</td>
+			</tr>				
+			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="" value="Gửi thông tin">
+				</td>
+			</tr>			
+		</table>
+	</form>
+</div>
+</body>
+</html>
