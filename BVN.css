@@ -1,0 +1,48 @@
+#header{
+	background-image: url("bg-masthead.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+.navbar-nav .nav-link{
+	color: white !important;
+}
+.navbar-brand {
+	color: white !important;
+}
+.title{
+	padding-top: 50px; 
+	font-size: 75px !important;
+}
+#navbarNavAltMarkup a:hover{
+	color: #e6520f !important;
+}
+.cach-le{
+	padding-left: 3% !important;
+	padding-right: 3% !important;
+}
+.icon{
+	padding-top: 50px;
+	font-size: 100px !important;
+	text-align: center;
+	color: #e6520f;
+}
+.ghi-chu{
+	padding-top: 20px;
+	padding-left: 15%;
+	padding-right: 15%; 
+}
+.btn-lg:hover{
+	background-color: #cc2f2f !important;
+	color: #de9b3c !important;
+}
+img{
+	padding: 0.5px !important;
+
+}
+#footer .fa{
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+#footer p{
+	font-size: 25px;
+}
